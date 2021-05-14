@@ -4,23 +4,32 @@ using UnityEngine;
 
 public class trying : MonoBehaviour
 {
-    public GameObject gams;
+    public GameObject gams; // объект с которым происходит работа
+    public int lvlgo; // уровень тригера
+    private bool wngo = false; // Находится ли объект в зоне действия тригера при нажатии enter
 
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.X) && wngo)
+        {
+            Debug.Log("вы попали на "+ lvlgo);
+        }
 
+    }
     void OnTriggerEnter(Collider col)
     {
         if(col.tag == "Player")
         {
-            Debug.Log("Работа");
             gams.SetActive(true);
+            wngo = true;
         }
     }
     void OnTriggerExit(Collider col1)
     {
         if (col1.tag == "Player")
         {
-            Debug.Log("РаботаВсё");
             gams.SetActive(false);
+            wngo = false;
         }
     }
 }

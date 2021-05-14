@@ -7,9 +7,11 @@ using UnityEngine;
 public class Play : MonoBehaviour
 {
 	
-	public float speed = 1.5f;
+	public float speed = 1.5f; // скорость перс-жа
 
 	public Transform head;
+
+	public GameObject gm;
 
 	public float sensitivity = 5f; // чувствительность мыши
 	public float headMinY = -40f; // ограничение угла дл€ головы
@@ -24,7 +26,7 @@ public class Play : MonoBehaviour
 	private int layerMask;
 	private Rigidbody body;
 	private float rotationY;
-	public Camera camera1;
+	public Camera camera1; // 'глаза'
 	void Start()
 	{
 		body = GetComponent<Rigidbody>();
@@ -62,7 +64,7 @@ public class Play : MonoBehaviour
 
 	void Update()
 	{
-        if (camera1.enabled == true)
+        if (!gm.activeSelf) //проверка на работу камеры
 		{
 
         
@@ -79,7 +81,7 @@ public class Play : MonoBehaviour
 		direction = new Vector3(h, 0, v);
 		direction = head.TransformDirection(direction);
 		direction = new Vector3(direction.x, 0, direction.z);
-
+		// предотвращение прыжков по воздуху
 		if (Input.GetKeyDown(jumpButton) && GetJump())
 		{
 			body.velocity = new Vector2(0, jumpForce);
