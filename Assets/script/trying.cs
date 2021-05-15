@@ -29,7 +29,7 @@ public class trying : MonoBehaviour
             if (lvlgo == 3)
             {
                 gams1.SetActive(true);
-                wngo = true;
+                wngo = false;
             }
             else
             {
