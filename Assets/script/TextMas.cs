@@ -14,6 +14,7 @@ public class TextMas : MonoBehaviour
     public GameObject obj1; //меню
     public GameObject screen; //экран
     public Material [] photo;//Массив объектов с фото
+    public GameObject sound; //звук клавы
 
     private int num;//Счётчик или указатель на место в листе
     private int tsk;//Счётчик для заданий
@@ -86,6 +87,7 @@ public class TextMas : MonoBehaviour
             //'тригеры' строк
             if (num == 8 || num == 11 || num == 17 || num == 15)
             {
+                sound.SetActive(true);
                 tes.SetActive(true);//Включение набора текста
             }
             else if (num == 22 || num == 24)
@@ -109,6 +111,7 @@ public class TextMas : MonoBehaviour
         string inpt = inp.text;//текст с поля ввода
         if (inpt.ToLower().Trim() == task[tsk].ToLower().Trim())//убираю все пробелы перед и после строк. Также ставлю всё в нижний регистр. Проверяю правильность текста
         {
+            sound.SetActive(false);
             tsk++;
             inp.text = "";
             ch1 = true;

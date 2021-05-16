@@ -7,6 +7,7 @@ public class trying : MonoBehaviour
 {
     public GameObject gams; // объект с которым происходит работа
     public GameObject gams1; // объект с которым происходит работа
+    public GameObject sound; //звук двери
     public int lvlgo; // уровень тригера
     private bool wngo = false; // Находится ли объект в зоне действия тригера при нажатии enter
 
@@ -18,9 +19,17 @@ public class trying : MonoBehaviour
             {
                 return;
             }
-            SceneManager.LoadScene(lvlgo);
+            Time.timeScale = 0;
+            StartCoroutine(Skip());
+            
         }
 
+    }
+    IEnumerator Skip()
+    {
+        sound.SetActive(true);
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(lvlgo);
     }
     void OnTriggerEnter(Collider col)
     {
