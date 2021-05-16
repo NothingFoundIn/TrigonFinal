@@ -27,6 +27,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.InputField
+    - UnityEngine.UI.RawImage
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/New Scene 1.unity:
@@ -54,6 +55,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 104
@@ -68,6 +73,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 2264}
     - Class: 114
       Script: {instanceID: 2338}
+    - Class: 114
+      Script: {instanceID: 2424}
     - Class: 114
       Script: {instanceID: 2648}
     - Class: 114
@@ -127,6 +134,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 104
@@ -149,6 +160,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 2264}
     - Class: 114
       Script: {instanceID: 2338}
+    - Class: 114
+      Script: {instanceID: 2424}
     - Class: 114
       Script: {instanceID: 2584}
     - Class: 114
@@ -374,7 +387,7 @@ ScriptsOnlyBuild:
     className: PositionAsUV1
   - hash:
       serializedVersion: 2
-      Hash: 112f1972f54d2210155961a591bdc585
+      Hash: e49fddb714969b00f306c59dd61e8e21
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: trying
@@ -464,7 +477,7 @@ ScriptsOnlyBuild:
     className: PlaymodeTestsController
   - hash:
       serializedVersion: 2
-      Hash: ddf9fbb7dbb8a3fa3d25df39b81c0536
+      Hash: 9ea5dada34ba8d02040ae8e76e858c9b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MenuCntrl
@@ -530,7 +543,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: 7c0bb9b3de88faff797b7d82cb8fcd76
+      Hash: 15e8e3cafb8989ad8ac88e5d384025ac
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TextMas
@@ -840,12 +853,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: TMP_TextEventCheck
-  - hash:
-      serializedVersion: 2
-      Hash: 8e77f488ab7d0373e0478764adcb4d75
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CamObj
   - hash:
       serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
