@@ -28,7 +28,7 @@ public class trying : MonoBehaviour
     IEnumerator Skip()
     {
         sound.SetActive(true);
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSecondsRealtime(3);
         SceneManager.LoadScene(lvlgo);
     }
     void OnTriggerEnter(Collider col)

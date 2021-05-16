@@ -8,6 +8,8 @@ public class MenuCntrl : MonoBehaviour
 {
     public GameObject obj;
     public GameObject obj1;
+    public RawImage snd;
+    public Texture[] photo;//Массив объектов с фото
     private bool gm = false;
     void Awake()
     {
@@ -20,10 +22,31 @@ public class MenuCntrl : MonoBehaviour
         obj.SetActive(false);
         obj1.SetActive(!obj1.activeSelf);
     }
+    public void SoundContrl()
+    {
+        AudioListener.pause = !AudioListener.pause;
+        if (AudioListener.pause == true)
+        {
+            snd.GetComponent<RawImage>().texture = photo[1];
+        }
+        else
+        {
+            snd.GetComponent<RawImage>().texture = photo[0];
+        }
+    }
     void Update()
     {
+        
         if (Input.GetKeyDown("escape"))  // если нажата клавиша Esc (Escape)
         {
+            if (AudioListener.pause == true)
+            {
+                snd.GetComponent<RawImage>().texture = photo[1];
+            }
+            else
+            {
+                snd.GetComponent<RawImage>().texture = photo[0];
+            }
             obj1.SetActive(!obj1.activeSelf);
             if (gm)//если включено меню, то нажатие esc его выключает
             {
